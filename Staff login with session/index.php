@@ -1,21 +1,23 @@
 <?php
   if(isset($_POST['Login'])) {
     $con =  mysqli_connect("localhost", "root", "", "mydb");
+    session_start();
     $username = $_POST['sname'];
     $password = $_POST['spass'];
     $query = "SELECT * FROM staff WHERE staff_id = '$username' AND pwd = '$password'";
     $res = mysqli_query($con, $query) or die(mysql_error());
     if(mysqli_num_rows($res) == 1) {
-        $_SESSION['sname'];
-        echo '$name';
-        header('Location: dashboard.php');
+        $_SESSION['sname'] = $username;
+        header('Location: dashboard.php?success=Login Successful'); 
     }
     else
-         echo "<html>";
-         echo "<marquee><h1>!!Invalid Credentials!!</h1></marquee>";
+         header('Location: index.php?invalid=Login Failed');
+         //echo "<html>";
+         //echo "<marquee><h1>!!Invalid Credentials!!</h1></marquee>";
         //echo "Invalid Credentials";
   }
     if(isset($_GET['logout'])) {
+         header('Location: index.php?logout=Successfully logged out');
          session_unset();
          session_unregister('sname');
          mysqli_close($con); 
@@ -47,8 +49,11 @@
   <body>
     <div class="view hm-black-strong">
         <div class="full-bg-img">
+            <h3 align="center" style="color:green;"><?php echo @$_GET["success"]; ?></h3>
+            <h3 align="center" style="color:red;"><?php echo @$_GET["invalid"]; ?></h3>
+            <h3 align="center" style="color:green;"><?php echo @$_GET["action"]; ?></h3>
             <h1 id="title" class="h1-responsive page-header">NSAM First Grade College Smart Campus, Nitte</h1>
-            <h1 id="title" class="h1-responsive">Staff Login</h1>
+            <h1 id="title" class="h1-responsive page-header2">Staff Login</h1>
             <div class="row container-box flex-center">
                 <div class="col-sm-6 hidden-xs">
                     <section id="left-section">
@@ -59,13 +64,13 @@
                 <div class="col-sm-6 col-xs-10">
                     <section id="right-section">
                         <h3 class="h3-responsive visible-xs-12">Login Here</h3>
-                        <form method="post" onsubmit="t()">
+                        <form  action="#" method="post" onsubmit="t()">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="user" name="sname" placeholder="Enter username">
+                                <input type="text" class="form-control" id="user" name="sname" placeholder="Enter username" required>
                             </div>
                             <div class="form-group">
                                 <!--input type="password" id="password" name="spass" placeholder="Enter password"-->
-                                <input type="password" id="pass" name="spass" placeholder="Enter password">
+                                <input type="password" id="pass" name="spass" placeholder="Enter password" required>
                             </div>
                             <div class="form-group"> 
                                 <div class="col-sm-offset-3 col-sm-9">
@@ -106,6 +111,12 @@
     <script type="text/javascript">
         window.sr = ScrollReveal();
         sr.reveal('.page-header',{
+            origin: 'top',
+            distance: '200px',
+            duration: 2000,
+            reset: false
+        });
+        sr.reveal('.page-header2',{
             origin: 'top',
             distance: '200px',
             duration: 2000,

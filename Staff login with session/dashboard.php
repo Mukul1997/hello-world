@@ -1,5 +1,8 @@
 <?php
       session_start();
+      if(!$_SESSION['sname']) {
+        header('Location: index.php');
+      }
 ?>
 
 <!DOCTYPE html>
@@ -40,8 +43,9 @@
                         <li><a data-toggle="tab" href="#attendance">Attendance</a></li>
                         <li><a data-toggle="tab" href="#syllabus">Syllabus</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right" style="padding-right:35px">
-                        <li><a href="index.php?action=logout"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Logout</a></li>
+                    <ul class="nav navbar-nav navbar-right" style="padding-right:35px">   
+                        <li><a href="index.php?action=Successfully Logged out"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>Logout</a></li>
+                        <li></li>
                     </ul>
                     </div>
                 </nav>
@@ -74,12 +78,10 @@
             </div>
             <div class="container flex-center">
                 <div class="row">
+                <h2 style="text-align:right;"><?php echo "Welcome ".$_SESSION['sname'];?></h2>
                     <div class="tab-content">
                         <div id="home" class="tab-pane fade in active">
                             <h3>HOME</h3>
-                            <h3><?php
-                                    echo 'Welcome '.$_SESSION['sname'];  
-                            ?></h3>
                             <p>Nihil voluptatem quia et provident facilis autem a assumenda. Reprehenderit enim ut quia qui veritatis et qui accusantium. Et et est fuga et aut. Sapiente laboriosam vitae cum alias architecto voluptatem facere. Vel totam eaque modi illo nisi. Aperiam provident voluptatem autem iste.
  
 Omnis illum itaque est non. Accusamus dolor sequi consequatur. Tempora molestias optio quia. Adipisci quas odit soluta rem debitis quo.
