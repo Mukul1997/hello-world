@@ -40,7 +40,7 @@
                             <td>
                                           <select name="subj" ng-model="sub_attend" ng-change="loadSection()">  
                                           <option value="">Select Subject</option>  
-                                          <option ng-repeat="sub in subject" >{{sub.sub_name}}</option>  
+                                          <option ng-repeat="sub in subject" value="{{sub.sub_id}}" >{{sub.sub_id}}-{{sub.sub_name}}</option>  
                                           </select>
                                    </td>
                                     <td>

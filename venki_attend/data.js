@@ -47,20 +47,19 @@ var app=angular.module("myApp",[]);
                   'sec_attend':$scope.sec_attend,
                   'selectedPeriod':$scope.selectedPeriod,
                   'stats':status[i]};
-                  console.log(status[i]);
               } 
                
-               $scope.value = arr;
+               $scope.value = angular.toJson(arr);
                console.log($scope.value);
                           
-                          // $http({  
-                          //              method:'POST',
-                          //              url:'insert_attend.php',       
-                          //              data:{'selectedDate':$scope.selectedDate,'sem_attend':$scope.sem_attend,'sub_attend':$scope.sub_attend,'sec_attend':$scope.sec_attend,'selectedPeriod':$scope.selectedPeriod}
+                          $http({  
+                                       method:'POST',
+                                       url:'insert_attend.php',       
+                                       data:$scope.value
                                     
-                          //         }).then(function(response){  
-                          //              alert(response.data);
-                          //         });
+                                  }).then(function(response){  
+                                       alert(response.data);
+                                  });
          }   
 
         $scope.displayStud = function(){ 
