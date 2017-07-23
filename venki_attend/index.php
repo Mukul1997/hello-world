@@ -29,7 +29,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <input type="date" ng-model="selectedDate" name="select date">
+                                <input type="date" ng-model="selectedDate" name="select date" id="x" >
                             </td>
                             <td>
                                           <select name="seme" ng-model="sem_attend" ng-change="loadSubject()">  
@@ -83,4 +83,10 @@
            </div>
       </body> 
       <script src="data.js"></script> 
+      <!--script type="text/javascript">
+      function t() {
+        today = document.getElementById('x').value;
+        console.log(today);
+      }
+      </script-->
  </html>  

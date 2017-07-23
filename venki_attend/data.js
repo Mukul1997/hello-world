@@ -36,12 +36,14 @@ var app=angular.module("myApp",[]);
         }
 
         $scope.insert_attend=function(){
-              var arr=[]; 
+              var arr=[];
+              $scope.date = document.getElementById('x').value;
+              alert($scope.date); 
               
               for(i=0;i<$scope.len;i++){
                   arr[i]={'usn':$scope.Student[i].usn, 
                   'name':$scope.Student[i].name, 
-                  'selectedDate':$scope.selectedDate,
+                  'selectedDate':$scope.date,
                   'sem_attend':$scope.sem_attend,
                   'sub_attend':$scope.sub_attend,
                   'sec_attend':$scope.sec_attend,
@@ -49,9 +51,7 @@ var app=angular.module("myApp",[]);
                   'stats':status[i]};
               } 
                
-               $scope.value = angular.toJson(arr);
-               console.log($scope.value);
-                          
+               $scope.value = angular.toJson(arr);                          
                           $http({  
                                        method:'POST',
                                        url:'insert_attend.php',       
@@ -62,7 +62,7 @@ var app=angular.module("myApp",[]);
                                   });
          }   
 
-        $scope.displayStud = function(){ 
+        $scope.displayStud = function(){
            $http({  
                      method:'POST',
                      url:'retrieve.php',  
@@ -72,4 +72,5 @@ var app=angular.module("myApp",[]);
              $scope.len=$scope.Student.length;         
                });
           }
+          
 });
