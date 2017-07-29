@@ -38,25 +38,19 @@
                 </div>
               
                 <ul class="nav navbar-nav">
-                  <li><a href="#"> Home </a></li>
+                  <li><a href="#/"> Home </a></li>
                   <li><a href="#Profile"> My Profile </a></li>
                   <li><a href="#Attendance"> Attendance </a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
                   <li><a href="#"> <?php echo($_SESSION['sname']);?> </a></li>
-                  <li><a href="logout.php"><span class="glyphicon glyphicon-log-out" name="logout"></span> Log Out </a></li>
+                  <li><a href="session/logout.php"><span class="glyphicon glyphicon-log-out" name="logout"></span> Log Out </a></li>
                 </ul>
         </div>
       </nav>
 
-        <div class="container">
-               
-                <div class="row">
-                  <h2 id="title" class="h1-responsive page-header">NSAM First Grade College Smart Campus, Nitte</h2>
-                  <hr style="border-top: 1.5px solid #102f78;">
-                </div>
-
+        <div class="container">               
                 <div ng-view>
                   <!-- modules are dynamically loaded here -->
                 </div> 
