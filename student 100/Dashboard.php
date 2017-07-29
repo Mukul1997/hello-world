@@ -1,7 +1,7 @@
 <?php
       session_start();
       if(!$_SESSION['sname']) {
-       header('Location: Login.php?action=Please Login');
+       header('Location:Login.php?action=Please Login');
       }
 ?>
 

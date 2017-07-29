@@ -1,5 +1,5 @@
 <?php 
-  require 'loginValidate.php';
+  require 'session/loginValidate.php';
 ?>
 
 <!DOCTYPE html>
