@@ -1,0 +1,57 @@
+<!-- <div class="jumbotron text-center">
+    <h1>{{ msg }}</h1>	
+</div> -->
+
+<div class="container-fluid begin"> 
+                <h1 align="center">Staff Database<span inline>
+                            <input style="display:inline-block;" type="submit" name="btnInsert" class="btn btn-info" ng-click="displayData()" value="{{btnName2}}"/>
+                        </span></h1>  
+                <div> 
+                     <div ng-hide="notVisible">
+                     	  <label>Staff ID</label>  
+                         <input type="text" name="usn" ng-model="u_roll" class="form-control" />  
+                         <br />
+                         <label>Password</label>  
+                         <input type="password" name="pass" ng-model="u_pass" class="form-control" />  
+                         <br />  
+                         <label>Name</label>  
+                         <input type="text" name="name" ng-model="u_name" class="form-control" />
+                         <br />
+                         <label>Mobile</label>  
+                         <input type="text" name="mobile" ng-model="u_mob" class="form-control" />  
+                         <br /> 
+                         <label>Email</label>  
+                         <input type="text" name="email" ng-model="u_email" class="form-control" />
+                         <br />  
+	                     <input type="hidden" ng-model="id" />  
+	                     <div style="text-align:center;">
+	                     	<input type="submit" name="btnInsert" class="btn btn-info" ng-click="insertData()" value="{{btnName}}"/>
+	                     	<!--input style="display:inline-block;" type="submit" name="btnInsert" class="btn btn-info" ng-click="displayData()" value="{{btnName2}}"/-->
+	                     </div>
+                     </div>
+                     <!-- <div style="text-align:center;padding-top:5px;">
+                     	<input style="display:inline-block;" type="submit" name="btnInsert" class="btn btn-info" ng-click="displayData()" value="{{btnName2}}"/>
+                     </div> -->
+                     <br /><br /> 
+                     <div ng-show="isVisible">
+                     	 <table class="table table-striped" style=""> 
+                            <tr>  
+                                 <th>Staff ID</th>
+                                 <th>Name</th>
+                                 <th>Mobile</th>
+                                 <!-- <th>Email</th>  -->                        
+                                 <th>Update</th>
+                                 <th>Delete</th>  
+                            </tr>  
+                            <tr ng-repeat="x in student">  
+                                 <td>{{x.staff_id}}</td>
+                                 <td>{{x.st_name}}</td>  
+                                 <td>{{x.st_mob}}</td>  
+                                 <!-- <td>{{x.st_email}}</td> -->
+                                 <td><button ng-click="updateData(x.id, x.staff_id, x.st_name, x.st_mob, x.st_email)" class="btn btn-success btn-xs">Update</button></td>
+                                 <td><button ng-click="deleteData(x.id )"class="btn btn-danger btn-xs">Delete</button></td>  
+                            </tr>   
+                       </table>
+                     </div>  
+                </div>  
+</div>

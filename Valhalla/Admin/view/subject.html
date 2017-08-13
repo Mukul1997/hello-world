@@ -1,0 +1,59 @@
+<table class="table">
+				<tr>
+					<td>Select Course</td>
+					<td>Select Semester</td>
+					<td>Enter Subject Name</td>
+					<td>Enter Subject ID</td>
+					<td>Select Subject Type</td>
+				</tr>
+				<tr>
+					<td>
+						<select ng-model="coursename" ng-change="loadSemester()">
+							<option>Select Course</option>
+							<option ng-repeat="x in course" value="{{x.c_id}}">{{x.c_name}}</option>
+						</select>
+					</td>
+					<td>
+						<select ng-model="sem">
+							<option>Select Semester</option>
+							<option ng-repeat="x in semester">{{x.sem_id | semesterfilter}}</option>
+						</select>
+					</td>
+					<td>
+						<input type="text" ng-model="subjectname" placeholder="Enter Subject Name">
+					</td>
+					<td>
+						<input type="text" ng-model="subjectid" placeholder="Enter Subject ID">
+					</td>
+					<td>
+						<select ng-model="subjecttype">
+							<option>Select SubjectType</option>
+							<option ng-repeat="x in subtype" value="{{x.typevalue}}">{{x.typename}}</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" ng-click="addSubject()" value="{{btnname}}">
+					</td>
+				</tr>
+			</table>
+			
+			<table class="table">
+				<tr>
+					<td>Course name</td>
+					<td>Semester</td>
+					<td>Subject Name</td>
+					<td>Subject Id</td>
+					<td>Subject Type</td>
+				</tr>
+				<tr ng-repeat="x in section">
+					<td>{{x.cname}}</td>
+					<td>{{x.semester_sem_id|semesterfilter}}</td>
+					<td>{{x.sub_name}}</td>
+					<td>{{x.sub_id}}</td>
+					<td>{{x.sub_type_name}}</td>
+					<td><input type="submit" ng-click="updateData(x.id,x.sub_name,x.sub_id)" value="UPDATE"></td>
+					<td><input type="submit" ng-click="deleteData(x.id)" value="DELETE"></td>
+				</tr>
+			</table>

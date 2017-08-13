@@ -1,0 +1,77 @@
+<!-- <div class="jumbotron text-center">
+    <h1>{{ msg }}</h1>
+</div> -->
+
+<div class="container-fluid begin"> 
+    <h1 align="center">Student Database <span inline>
+                            <input style="display:inline-block;" type="submit" name="btnInsert" class="btn btn-info" ng-click="displayData()" value="{{btnName2}}"/>
+                        </span></h1>  
+                <div> 
+                     	 <!-- <div style="text-align:center;padding-top:5px;">
+                            <input style="display:inline-block;" type="submit" name="btnInsert" class="btn btn-info" ng-click="displayData()" value="{{btnName2}}"/>
+                        </div> -->
+                     <div ng-hide="notVisible" class="red">
+                         <label>USN</label>  
+                         <input type="text" name="usn" ng-model="u_roll" class="form-control" />  
+                         <br />
+                         <label>Date of Birth</label>  
+                         <input type="text" name="date" ng-model="u_dob" class="form-control" />  
+                         <br />  
+                         <label>Name</label>  
+                         <input type="text" name="name" ng-model="u_name" class="form-control" />
+                         <br />
+                         <label>Mobile</label>  
+                         <input type="text" name="mobile" ng-model="u_mob" class="form-control" />  
+                         <br />
+                         <label>Address</label>  
+                         <input type="text" name="address" ng-model="u_add" class="form-control" />  
+                         <br />  
+                         <label>Email</label>  
+                         <input type="text" name="email" ng-model="u_email" class="form-control" />
+                         <br />  
+                         <label>Section</label>  
+                         <input type="text" name="section" ng-model="u_sec" class="form-control" /> 
+                         <br />
+                         <label>Semester</label>  
+                         <input type="text" name="sem" ng-model="u_sem" class="form-control" />  
+                         <br />  
+	                     <input type="hidden" ng-model="id" />  
+	                     <div style="text-align:center;">
+	                     	<input type="submit" name="btnInsert" class="btn btn-info" ng-click="insertData()" value="{{btnName}}"/>
+	                     	<!--input style="display:inline-block;" type="submit" name="btnInsert" class="btn btn-info" ng-click="displayData()" value="{{btnName2}}"/-->
+	                     </div>
+                     </div>
+                     <!-- <div style="text-align:center;padding-top:5px;">
+                     	<input style="display:inline-block;" type="submit" name="btnInsert" class="btn btn-info" ng-click="displayData()" value="{{btnName2}}"/>
+                     </div> -->
+                     <br /><br /> 
+                     <div id="vis" ng-show="isVisible">
+                     	 <table class="table table-striped" style=""> 
+                            <tr>  
+                                 <th>USN</th>  
+                                 <th>Date of Birth</th>
+                                 <th>Name</th>
+                                 <!-- <th>Mobile</th>
+                                 <th>Address</th>
+                                 <th>Email</th>  --> 
+                                 <th>Section</th>
+                                 <th>Semester</th>                        
+                                 <th>Update</th>
+                                 <th>Delete</th>  
+                            </tr>  
+                            <tr ng-repeat="x in student">  
+                                 <td>{{x.usn}}</td>  
+                                 <td>{{x.dob}}</td>
+                                 <td>{{x.name}}</td>  
+                                 <!-- <td>{{x.mob}}</td>
+                                 <td>{{x.address}}</td>  
+                                 <td>{{x.email}}</td> -->
+                                 <td>{{x.section_sec_id}}</td>  
+                                 <td>{{x.section_semester_sem_id}}</td>
+                                 <td><button ng-click="updateData(x.id, x.usn, x.dob, x.name, x.mob, x.address, x.email, x.section_sec_id, x.section_semester_sem_id)" class="btn btn-success btn-xs">Update</button></td>
+                                 <td><button ng-click="deleteData(x.id )"class="btn btn-danger btn-xs">Delete</button></td>  
+                            </tr>   
+                       </table>
+                     </div>  
+                </div>  
+           </div>

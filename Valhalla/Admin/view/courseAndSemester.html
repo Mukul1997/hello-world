@@ -1,0 +1,23 @@
+<table class="table">
+	<tr>
+		<td>Enter Course</td>
+		<td><input type="text" ng-model="coursename" placeholder="Enter Course name"></td>
+	</tr>
+	<tr>
+		<td>Enter the number of semesters</td>
+		<td><input type="text" ng-model="semnumber" placeholder="Enter number of semester"></td>
+	</tr>
+	<tr>
+		<td><input type="submit" ng-click="addCourse()" value="{{btnname}}"></td>
+	</tr>
+</table>
+<table class="table">
+	<tr>
+		<td>Course name</td>
+	</tr>
+	<tr ng-repeat="x in course">
+		<td>{{x.c_name}}</td>
+		<td><input type="submit" ng-click="updateData(x.id,x.c_id,x.c_name)" value="UPDATE"></td>
+		<td><input type="submit" ng-click="deleteData(x.id)" value="DELETE"></td>
+	</tr>
+</table>

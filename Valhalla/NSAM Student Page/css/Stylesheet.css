@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Vidaloka');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Frijole|Press+Start+2P');
+
+html,
+body,
+.view,.Dashboard_View{
+    height: 100%;
+   }
+
+.view {
+    background: url("../img/Background-Image.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+	
+
+body{
+	height: 100%;
+	width: 100%;
+	margin-top: 20px;
+}
+
+
+.container-box {
+	padding-top: 4.5%;
+	padding-left: 150px;
+    margin: 0px auto 0px auto;
+    max-width: 800px;
+    font-size: 16px;
+}
+
+#title {
+	padding-top: 15px;
+    color: black;
+    margin: 0px auto 0px auto;
+    max-width: 800px;
+    text-align: center;
+    /*font-family: 'Frijole', cursive; */     font-family: 'Press Start 2P', cursive; 
+}
+
+.login-page{
+	margin: -1px auto 0px 250px;
+	/*margin: 0px auto 0px 300px;*/
+	width: 80%;
+	background: #3ca2e0 no-repeat fixed;
+	text-align: center;
+	padding: 1.5em;
+
+}
+
+
+.user-avatar{
+	width: 30%;
+	height: 30%;
+
+}
+
+.login-page, h3{
+	font-weight: 300;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+}
+
+.form-content{
+	padding: 13px 0;
+
+}
+
+.btn-warning{
+	border-radius: 50px;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255,0.8)inset;
+	font-weight:400;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+input[type="text"]:focus, input[type="password"]:focus, .ui-autocomplete-input, textarea, .uneditable-input {
+	color:black;
+	border: 2px solid #336600;
+}
+
+
+.fa-user {
+	position: absolute;
+	right: 35px;
+	top: 217px;
+	color: gray;
+	size:5%;
+
+}
+.fa-lock {
+	position: absolute;
+	right: 35px;
+	top: 277px;
+	color: gray;
+}
+
+.aboutHelp {
+    text-align: justify;
+    text-indent: 25px;
+}
+
+.Invalid-Message{
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	color: red;
+	text-align: center; 
+}
+
+.Logout-Message{
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	color: green;
+	text-align: center; 
+	}
+
+
+#Dashboard_Background{
+	background:url("../img/Dashboard_Vector.jpg")no-repeat center center fixed ;
+	    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.footer{
+	background-color: black;
+	color: white;
+	position:relative;
+	
+
+}
+
+#footer-stuff{
+	padding-top: 3%;
+	margin: 0 auto;
+
+}
+
+#footer-links a{
+	color: white;
+	text-decoration: none;
+
+}
+
+#staff_view{
+
+	background-color: #aab0ed;
+}
+
+.staff-user-avatar{
+
+	width: 50%;
+	height: 50%;
+	margin-left: 25%;
+	margin-top: 10%;
+
+}
+
+.Login-Site{
+
+	margin-top: 5%;
+	background-color: #0e2c38;
+
+}
+
+.Login-Site, h3{
+
+			font-weight: 300;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+
+}
+
+#staff-user {
+
+	margin-top: 19%;
+}
+
+#staff-lock {
+
+	margin-top: 19%;
+}
+
+.p3{
+	margin-top:5rem; 
+
+}
