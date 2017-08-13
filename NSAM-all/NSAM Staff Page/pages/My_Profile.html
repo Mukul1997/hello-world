@@ -1,0 +1,137 @@
+<div class="container" ng-repeat="w in studDetails">
+	<!-- <div class="row"> -->
+		<h2 id="title" class="h1-responsive page-header" style="text-align: center; padding-bottom: 2.2%; ">  My Profile  </h2>
+		
+		<div class="col-md-4">
+			
+			<col-md-4> 
+				
+				<div class="well" style="margin-left:7%;">
+					<img class="img-responsive img-circle" src="img\Profile_Vector_1.png" style="margin-left:25%;height:40%;width:50%;padding-bottom: 20px;">
+					<table class="table table-bordered table-striped" style="text-align: center;">
+						<thead>
+						    <tr>
+								<th >Name : </th> 
+								<td> {{w.name}} </td>
+						    </tr>
+						    <tr>  
+						    	 <th>USN</th>
+								 <td> {{w.usn}} </td>
+						     </tr> 	
+					          <tr>
+					          	 <th>Branch</th>	
+								 <td> {{w.c_name}} </td>
+							  </tr>
+
+						</thead>
+			  		</table>
+	          </div>
+		
+		    </col-md-4>
+
+        </div>
+		
+		<div class="col-md-8" style="padding-left: 7%">
+			<div class="table-responsive">
+		
+				  <table width="350px" class="table table-bordered table-striped" style="text-align:center;">
+						 <thead>
+							<tr >		
+					        	<th>Father's Name</th>
+					       	 	<th>Mother's Name</th>		
+					        	<th>DOB</th>		
+					        	<th>Blood Group</th>		
+					        	<th>Sex</th>		
+					        </tr>		
+					    </thead>		
+					    <tbody>		
+					        <tr>		
+					        	<td>{{w.father_name}}</td>		
+					        	<td>{{w.mother_name}}</td>		
+					       	 	<td>{{w.dob | date : "dd.MM.y"}}</td>		
+					        	<td>{{w.blood_group}}</td>		
+					        	<td>{{w.sex}}</td>		
+					        </tr>		
+					    </tbody>		
+				  </table>
+		
+			  <div class="table-responsive">		
+				  <table class="table table-bordered table-striped" style="text-align: center;">		
+				  <thead>		
+				      <tr >		
+				        <th>Religion</th>		
+				        <th>Nationality</th>		
+				        <th>Email-ID</th>		
+				        <th>Student's Phone No.</th>		
+				        <th>Parent's Phone No.</th>		
+				      </tr>		
+				    </thead>		
+				    <tbody>		
+				      <tr>		
+				        <td>{{w.religion}}</td>		
+				        <td>{{w.nationality}}</td>		
+				        <td>{{w.email}}</td>		
+				        <td>{{w.mob}}</td>		
+				        <td>{{w.parent_mob}}</td>		
+				      </tr>		
+				     </tbody>		
+				  </table>		
+				  
+				  <div class="table-responsive">
+				  	 <table class="table table-bordered table-striped" style="text-align: center;">		
+					    <thead>		
+					      <tr >		
+					        <th>Permanent Address</th>		
+					        <th>Communication Address</th>		
+					      </tr>		
+					    </thead>
+					    <tbody>		
+					      <tr>		
+					        <td> {{w.permanent_address}} </td>		
+					        <td> {{w.comm_address}} </td>		
+					      </tr>		
+					     </tbody>		
+					    <!-- <tbody>		
+					      <tr>		
+					        <td> T-2, ALICE MANOR </td>		
+					        <td> T-2, ALICE MANOR </td>		
+					      </tr>		
+					     </tbody>		
+					     <tbody>		
+					      <tr>		
+					        <td> PATRAO LANE KARANGALPADY </td>		
+					        <td> PATRAO LANE KARANGALPADY </td>		
+					      </tr>		
+					     </tbody>		
+				         <tbody>		
+					      <tr>		
+					        <td> KODIAL BAIL MANGALORE </td>		
+					        <td> KODIAL BAIL MANGALORE </td>		
+					      </tr>		
+					     </tbody>		
+				         <tbody>		
+					      <tr>		
+					        <td> DAKSHINA KANNADA </td>		
+					        <td> DAKSHINA KANNADA </td>		
+					      </tr>		
+					     </tbody>		
+					      <tbody>		
+					      	<tr>		
+					         <td> KARNATAKA </td>		
+					         <td> KARNATAKA </td>		
+					      	</tr>		
+					     </tbody>		
+			              <tbody>		
+					      <tr>		
+					        <td> 575003 </td>		
+					        <td> 575003 </td>		
+					      </tr>		
+					     </tbody> -->		
+		  			</table>
+				  </div>
+			  </div>		
+		  </div>		
+	   </div>
+<!-- 	</div> -->
+</div>
+
