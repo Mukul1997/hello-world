@@ -14,7 +14,4 @@
             echo json_encode($output);
         }
     } 
-    //else {
-    //     echo "error in DB Connection or Code";
-    // }
 ?>

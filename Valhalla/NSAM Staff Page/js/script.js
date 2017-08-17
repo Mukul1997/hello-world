@@ -42,19 +42,25 @@
 
 
 	app.factory('LoginFactory', ['$http', function ($http) {
-		var id='st002';
-		var name='Teacher2';
-		var password='st002';
-		// $http.get('pages/php/getcred.php').success(function (d){
-		// 	id = d[0];
-		// 	name = d[1];
-		// });
+		var id;
+		var name;
+		var password;
+		$http.get('pages/php/getcred.php').success(function (rep){
+			id = rep[0];
+			name = rep[1];
+		});
 		return {
 			getID: id,
 			getName: name,
 			getPassword: password
 		};
 	}]);
+
+	// $http.get("pages/php/getcred.php").then(function(response){
+ //            $scope.Det=response.data;
+ 			   // id = $scope.Det[0];
+ 			   // name = $scope.Det[1];
+ //        });
 
 	// all the controllers are in js/controllers folders
 

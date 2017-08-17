@@ -27,6 +27,7 @@
     <script src="js/controllers/reportController.js"></script> 
     <script src="js/controllers/staffChangePasswordController.js"></script> 
     <script src="https://rawgithub.com/eligrey/FileSaver.js/master/FileSaver.js" type="text/javascript"></script>
+    <script src="js/fileSaver.js" type="text/javascript"></script>
 
   </head>
 
@@ -40,7 +41,7 @@
         </div>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"></a></li>
+          <li><a href="#"><?php echo($_SESSION['sta_name'])?></a></li>
           <li><a href="session/logout.php" name="logout">Logout</a></li>
         </ul>
       </div>

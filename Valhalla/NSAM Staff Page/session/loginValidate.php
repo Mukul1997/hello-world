@@ -13,7 +13,7 @@
 
         while($row = mysqli_fetch_assoc($res))
         {
-           $_SESSION['st_name'] = $row["name"];
+           $_SESSION['sta_name'] = $row['st_name'];
         }
         $_SESSION['sname'] = $user;
         
