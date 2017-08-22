@@ -169,21 +169,21 @@
     
     <script type="text/javascript">
 
-        window.sr = ScrollReveal();
-        sr.reveal('.page-header',{
-            origin: 'top',
-            distance: '200px',
-            duration: 2000,
-            reset: false
-        });
-        sr.reveal('.login-page',{
-            origin: 'bottom',
-            delay: 300,
-            distance: '69px',
-            duration: 2000,
-            viewFactor: 0.3,
-            reset: false
-        });
+        // window.sr = ScrollReveal();
+        // sr.reveal('.page-header',{
+        //     origin: 'top',
+        //     distance: '200px',
+        //     duration: 2000,
+        //     reset: false
+        // });
+        // sr.reveal('.login-page',{
+        //     origin: 'bottom',
+        //     delay: 300,
+        //     distance: '69px',
+        //     duration: 2000,
+        //     viewFactor: 0.3,
+        //     reset: false
+        // });
 
         function ClearOff(){
         document.getElementById('username').value="";

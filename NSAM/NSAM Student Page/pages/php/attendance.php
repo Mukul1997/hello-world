@@ -19,14 +19,6 @@
 	      	    WHERE Student_usn='$stud'
 	      	    AND status='1'";	
 	
-	// $query = "SELECT COUNT(*) AS total,sub_name FROM attendance
-	// 		  INNER JOIN subject_list
-	// 		  ON attendance.subject_list_sub_id=subject_list.sub_id
-	// 		  WHERE Student_usn='$stud'
-	// 		  AND subject_list_sub_id='bscenl100'
-	// 		  AND status='1'";
-	// $query = "SELECT * FROM student INNER JOIN student_details ON student.usn=student_Details.student_usn where usn='$stud'";
-	
 	$res1=mysqli_query($connect,$sub_query);
 	$res2=mysqli_query($connect,$total_query);
 	$res3=mysqli_query($connect,$attend_query);
