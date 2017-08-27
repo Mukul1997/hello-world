@@ -6,10 +6,6 @@ angular.module('adminApp').controller('staffController', function($scope,$http) 
            if($scope.u_roll == null)  
              {  
                   alert("Staff ID is required");  
-             }  
-             else if($scope.u_pass == null)  
-             {  
-                  alert("Password is required");  
              }
              else if($scope.u_name == null)  
              {  
@@ -27,11 +23,10 @@ angular.module('adminApp').controller('staffController', function($scope,$http) 
            {  
                 $http.post(  
                      "view/php/insertSTAFF.php",  
-                     {'u_roll':$scope.u_roll, 'u_pass':$scope.u_pass, 'u_name':$scope.u_name, 'u_mob':$scope.u_mob, 'u_email':$scope.u_email, 'id':$scope.id}  
+                     {'u_roll':$scope.u_roll, 'u_name':$scope.u_name, 'u_mob':$scope.u_mob, 'u_email':$scope.u_email, 'btnName':$scope.btnName, 'id':$scope.id}  
                 ).success(function(data){  
                      alert(data);  
-                       $scope.u_roll = null;
-                       $scope.u_pass = null;   
+                       $scope.u_roll = null;  
                        $scope.u_name = null;
                        $scope.u_mob = null;  
                        $scope.u_email = null;   
@@ -50,10 +45,9 @@ angular.module('adminApp').controller('staffController', function($scope,$http) 
            $scope.isVisible = $scope.isVisible ? false : true;
            $scope.notVisible = $scope.notVisible ? false : true;   
       }  
-      $scope.updateData = function(id, usn, pass, name, mobile, email){  
+      $scope.updateData = function(id, usn, name, mobile, email){  
              $scope.id = id;  
-             $scope.u_roll = usn;
-             $scope.u_pass = pass;   
+             $scope.u_roll = usn;   
              $scope.u_name = name;
              $scope.u_mob = mobile;  
              $scope.u_email = email;    

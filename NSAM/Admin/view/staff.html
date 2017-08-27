@@ -10,10 +10,7 @@
                      <div ng-hide="notVisible">
                      	  <label>Staff ID</label>  
                          <input type="text" name="usn" ng-model="u_roll" class="form-control" />  
-                         <br />
-                         <label>Password</label>  
-                         <input type="password" name="pass" ng-model="u_pass" class="form-control" />  
-                         <br />  
+                         <br /> 
                          <label>Name</label>  
                          <input type="text" name="name" ng-model="u_name" class="form-control" />
                          <br />
@@ -39,7 +36,7 @@
                                  <th>Staff ID</th>
                                  <th>Name</th>
                                  <th>Mobile</th>
-                                 <!-- <th>Email</th>  -->                        
+                                 <th>Email</th>                         
                                  <th>Update</th>
                                  <th>Delete</th>  
                             </tr>  
@@ -47,7 +44,7 @@
                                  <td>{{x.staff_id}}</td>
                                  <td>{{x.st_name}}</td>  
                                  <td>{{x.st_mob}}</td>  
-                                 <!-- <td>{{x.st_email}}</td> -->
+                                 <td>{{x.st_email}}</td>
                                  <td><button ng-click="updateData(x.id, x.staff_id, x.st_name, x.st_mob, x.st_email)" class="btn btn-success btn-xs">Update</button></td>
                                  <td><button ng-click="deleteData(x.id )"class="btn btn-danger btn-xs">Delete</button></td>  
                             </tr>   
