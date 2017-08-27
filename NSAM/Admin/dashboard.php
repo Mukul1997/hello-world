@@ -58,12 +58,12 @@
           <div class="col-md-2">
             <div class="dropdown create">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Create User
+                Bulk Upload
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a type="button" data-toggle="modal" data-target="#addPage">Add Staff</a></li>
-                <li><a type="button" data-toggle="modal" data-target="#addPage">Add Student</a></li>
+                <li><a type="button" data-toggle="modal" data-target="#addPage1">Add Staff</a></li>
+                <li><a type="button" data-toggle="modal" data-target="#addPage2">Add Student</a></li>
               </ul>
             </div>
           </div>
@@ -112,45 +112,58 @@
 
     <!-- Modals -->
 
-    <!-- Add Page -->
-    <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <form>
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Add User</h4>
+    <!-- Add Page1 -->
+    <div class="modal fade" id="addPage1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Add Staff</h4>
+        </div>
+        <div class="modal-body">
+          <!-- data here -->
+          <form action="view/php/bstaff.php" method="post" enctype="multipart/form-data">
+              <h1>Bulk Entry (Staff)</h1>
+              <input type="file" name="file"/>
+              <br><br>
+              <input type="submit" name="importsub"/>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <!-- <button type="submit" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </form>
       </div>
-      <div class="modal-body">
-        <div class="form-group">
-          <label>Page Title</label>
-          <input type="text" class="form-control" placeholder="Page Title">
-        </div>
-        <div class="form-group">
-          <label>Page Body</label>
-          <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Published
-          </label>
-        </div>
-        <div class="form-group">
-          <label>Meta Tags</label>
-          <input type="text" class="form-control" placeholder="Add Some Tags...">
-        </div>
-        <div class="form-group">
-          <label>Meta Description</label>
-          <input type="text" class="form-control" placeholder="Add Meta Description...">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
-      </div>
-    </form>
     </div>
-  </div>
+</div>
+
+<!-- Add Page2 -->
+    <div class="modal fade" id="addPage2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Add Student</h4>
+        </div>
+        <div class="modal-body">
+          <!-- data here -->
+          <form action="view/php/bstudent.php" method="post" enctype="multipart/form-data">
+              <h1>Bulk Entry (Student)</h1>
+              <input type="file" name="file"/>
+              <br><br>
+              <input type="submit" name="importsub"/>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <!-- <button type="submit" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </form>
+      </div>
+    </div>
 </div>
 
 <script>
