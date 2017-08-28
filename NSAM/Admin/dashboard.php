@@ -3,6 +3,8 @@
       if(!$_SESSION['name']) {
        header('Location: index.php?action=Please Login');
       }
+      include 'view/php/bstaff.php';
+      include 'view/php/bstudent.php';
 ?>
 
 <html lang="en" ng-app="adminApp">
@@ -115,11 +117,11 @@
     <!-- Add Page1 -->
     <div class="modal fade" id="addPage1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content" id="m1">
         <form>
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Add Staff</h4>
+          <h3 class="modal-title" id="myModalLabel">Add Staff</h3>
         </div>
         <div class="modal-body">
           <!-- data here -->
@@ -127,7 +129,7 @@
               <h1>Bulk Entry (Staff)</h1>
               <input type="file" name="file"/>
               <br><br>
-              <input type="submit" name="importsub"/>
+              <input class="btn btn-info" type="submit" name="importsub"/>
           </form>
         </div>
         <div class="modal-footer">
@@ -142,11 +144,11 @@
 <!-- Add Page2 -->
     <div class="modal fade" id="addPage2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content" id="m2">
         <form>
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Add Student</h4>
+          <h3 class="modal-title" id="myModalLabel">Add Student</h3>
         </div>
         <div class="modal-body">
           <!-- data here -->
@@ -154,7 +156,7 @@
               <h1>Bulk Entry (Student)</h1>
               <input type="file" name="file"/>
               <br><br>
-              <input type="submit" name="importsub"/>
+              <input class="btn btn-info" type="submit" name="importsub"/>
           </form>
         </div>
         <div class="modal-footer">
@@ -166,9 +168,9 @@
     </div>
 </div>
 
-<script>
+<!--script>
     CKEDITOR.replace( 'editor1' );
-</script>
+</script-->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

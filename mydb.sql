@@ -1,9 +1,18 @@
--- Adminer 4.3.0 MySQL dump
+-- Adminer 4.3.1 MySQL dump
 
 SET NAMES utf8;
 SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE `admin` (
+  `name` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `admin` (`name`, `pass`) VALUES
+('admin',	'81dc9bdb52d04dc20036dbd8313ed055');
 
 DROP TABLE IF EXISTS `assign_subject`;
 CREATE TABLE `assign_subject` (
@@ -23,6 +32,7 @@ CREATE TABLE `assign_subject` (
 INSERT INTO `assign_subject` (`sub_id`, `staff_staff_id`, `section_sec_id`, `section_semester_sem_id`, `course_c_id`) VALUES
 ('bscenl100',	'st001',	'1',	'1_1',	'c_1'),
 ('bcomenl101',	'st001',	'1',	'2_1',	'c_2'),
+('bbmenl102',	'st001',	'1',	'3_1',	'c_3'),
 ('bcomenl101',	'st001',	'2',	'2_1',	'c_2'),
 ('bbmenl102',	'st001',	'2',	'3_1',	'c_3'),
 ('bscenl100',	'st002',	'1',	'1_1',	'c_1');
@@ -49,18 +59,20 @@ CREATE TABLE `attendance` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `attendance` (`date_attend`, `period`, `status`, `Student_usn`, `staff_staff_id`, `section_sec_id`, `section_semester_sem_id`, `subject_list_sub_id`) VALUES
-('2017-07-19',	2,	0,	'4nm15cs104',	'st001',	'1',	'1_1',	'bcomenl101'),
-('2017-07-19',	2,	1,	'4nm15cs100',	'st001',	'1',	'1_1',	'bcomenl101'),
-('2017-07-25',	1,	0,	'4nm15cs100',	'st002',	'1',	'1_1',	'bscenl100'),
-('2017-07-25',	1,	1,	'4nm15cs104',	'st002',	'1',	'1_1',	'bscenl100'),
-('2017-07-26',	2,	1,	'4nm15cs100',	'st002',	'1',	'1_1',	'bscenl100'),
-('2017-07-26',	2,	1,	'4nm15cs104',	'st002',	'1',	'1_1',	'bscenl100'),
-('2017-07-28',	2,	1,	'4nm15cs100',	'st002',	'1',	'1_1',	'bscenl100'),
-('2017-07-28',	2,	1,	'4nm15cs104',	'st002',	'1',	'1_1',	'bscenl100'),
-('2017-07-29',	3,	0,	'4nm15cs100',	'st002',	'1',	'1_1',	'bscenl100'),
-('2017-07-29',	3,	0,	'4nm15cs104',	'st002',	'1',	'1_1',	'bscenl100'),
-('2017-07-30',	1,	1,	'4nm15cs100',	'st002',	'1',	'1_1',	'bscenl100'),
-('2017-07-30',	1,	1,	'4nm15cs104',	'st002',	'1',	'1_1',	'bscenl100');
+('2017-08-21',	1,	1,	'4nm15cs100',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-21',	1,	1,	'4nm15cs104',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-21',	10,	0,	'4nm15cs100',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-21',	10,	0,	'4nm15cs104',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-22',	1,	0,	'4nm15cs104',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-22',	1,	1,	'4nm15cs100',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-24',	8,	0,	'4nm15cs100',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-24',	8,	0,	'4nm15cs104',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-28',	1,	0,	'4nm15cs100',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-28',	1,	0,	'4nm15cs104',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-28',	1,	1,	'4nm15cs100',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-28',	1,	1,	'4nm15cs104',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-28',	2,	0,	'4nm15cs104',	'st001',	'1',	'1_1',	'bscenl100'),
+('2017-08-28',	2,	1,	'4nm15cs100',	'st001',	'1',	'1_1',	'bscenl100');
 
 DROP TABLE IF EXISTS `course`;
 CREATE TABLE `course` (
@@ -74,8 +86,7 @@ CREATE TABLE `course` (
 INSERT INTO `course` (`id`, `c_id`, `c_name`) VALUES
 (1,	'c_1',	'bsc'),
 (2,	'c_2',	'bcom'),
-(3,	'c_3',	'bbm'),
-(4,	'c_4',	'GGG');
+(3,	'c_3',	'bbm');
 
 DROP TABLE IF EXISTS `section`;
 CREATE TABLE `section` (
@@ -112,14 +123,7 @@ INSERT INTO `semester` (`sem_id`, `course_c_id`) VALUES
 ('2_1',	'c_2'),
 ('2_2',	'c_2'),
 ('3_1',	'c_3'),
-('3_2',	'c_3'),
-('4_1',	'c_4'),
-('4_2',	'c_4'),
-('4_3',	'c_4'),
-('4_4',	'c_4'),
-('4_5',	'c_4'),
-('4_6',	'c_4'),
-('4_7',	'c_4');
+('3_2',	'c_3');
 
 DROP TABLE IF EXISTS `staff`;
 CREATE TABLE `staff` (
@@ -137,7 +141,8 @@ CREATE TABLE `staff` (
 INSERT INTO `staff` (`id`, `staff_id`, `pwd`, `st_name`, `st_mob`, `st_email`, `st_join_date`) VALUES
 (1,	'st001',	'st001',	'Teacher 1',	100100100,	'teacher1@mail.com',	NULL),
 (2,	'st002',	'st002',	'Teacher 2',	200200200,	'teacher2@mail.com',	NULL),
-(3,	'st009',	'st009',	'st009',	2147483647,	'w@gmail.com',	'2017-07-25');
+(4,	'st003',	'st003',	'Teacher 3',	30003000,	'coverMe@mail.com',	NULL),
+(3,	'st004',	'st009',	'Teacher 4',	2147483647,	'w@gmail.com',	'2017-07-25');
 
 DROP TABLE IF EXISTS `student`;
 CREATE TABLE `student` (
@@ -165,6 +170,24 @@ INSERT INTO `student` (`id`, `usn`, `dob`, `name`, `mob`, `address`, `email`, `s
 (6,	'4nm15cs105',	'1995-09-07',	'student 6',	60006000,	'i am lost',	'nointernet.com',	'2',	'2_1'),
 (7,	'4nm15cs106',	'1500-06-20',	'student 7',	2147483647,	'hghsghg',	'abcd@.com',	'1',	'3_1'),
 (8,	'4nm15cs107',	'1995-12-30',	'student 8',	2147483647,	'mangalore',	's8@g.com',	'2',	'3_1');
+
+DROP TABLE IF EXISTS `student_details`;
+CREATE TABLE `student_details` (
+  `student_usn` varchar(255) NOT NULL,
+  `father_name` varchar(255) NOT NULL,
+  `mother_name` varchar(255) NOT NULL,
+  `blood_group` varchar(255) NOT NULL,
+  `sex` varchar(255) NOT NULL,
+  `parent_mob` int(100) NOT NULL,
+  `religion` varchar(255) NOT NULL,
+  `nationality` varchar(255) NOT NULL,
+  `permanent_address` varchar(255) NOT NULL,
+  `comm_address` varchar(255) NOT NULL,
+  KEY `student_usn` (`student_usn`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `student_details` (`student_usn`, `father_name`, `mother_name`, `blood_group`, `sex`, `parent_mob`, `religion`, `nationality`, `permanent_address`, `comm_address`) VALUES
+('4nm15cs100',	'Father 1',	'Mother 1',	'A+',	'male',	10000000,	'-',	'-',	'here',	'here');
 
 DROP TABLE IF EXISTS `subject_list`;
 CREATE TABLE `subject_list` (
@@ -198,4 +221,4 @@ INSERT INTO `subject_sem` (`subject_list_sub_id`, `semester_sem_id`, `semester_c
 ('bcomenl101',	'2_1',	'c_2'),
 ('bscenl100',	'1_1',	'c_1');
 
--- 2017-08-10 09:49:01
+-- 2017-08-28 14:22:47

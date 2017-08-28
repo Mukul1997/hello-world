@@ -35,5 +35,6 @@ if(isset($_POST['importsub']))
        $res2=mysqli_query($connect,$sql1);
     }
 
+    echo ("Successful");
 }
 ?>

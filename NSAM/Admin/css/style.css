@@ -150,3 +150,13 @@ div.red {
     margin-left: 91px;
     width: 614px;
 }
+
+#m1 {
+  background: url(../img/bstaff.jpg);
+  /*opacity: 0.5;*/
+}
+
+#m2 {
+  background: url(../img/bstudent.jpg);
+  /*opacity: 0.5;*/
+}
