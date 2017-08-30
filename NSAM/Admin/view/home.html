@@ -36,11 +36,31 @@
 
 <div class="panel panel-default">
     <div class="panel-heading main-color-bg">
-        <h3 class="panel-title">Student's In different Departments</h3>
+        <h3 class="panel-title">Bulk Upload of Staff and Student</h3>
     </div>
     <div class="panel-body">
-        <!-- Chart added here -->
-        <h1 class="page-header text-capitalize">chart.js with ngRoute some issue found not accessable</h1>
-        <canvas id="myChart" width="300" height="300"></canvas>
+        <div class="col-md-6 col-xs-3">
+            <div class="well text-center">
+                <form action="view/php/bstudent.php" method="post" enctype="multipart/form-data">
+                    <h1>Bulk Entry (Student)</h1>
+                    <input type="file" name="file"/>
+                    <br><br>
+                    <input class="btn btn-info" type="submit" name="importsub"/>
+                 </form>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-xs-3">
+            <div class="well text-center">
+                <form action="view/php/bstaff.php" method="post" enctype="multipart/form-data">
+                    <h1>Bulk Entry (Staff)</h1>
+                    <input type="file" name="file"/>
+                    <br><br>
+                    <input class="btn btn-info" type="submit" name="importsub"/>
+                </form>
+            </div>
+        </div>
+        <!-- <h1 class="page-header text-capitalize">chart.js with ngRoute some issue found not accessable</h1>
+        <canvas id="myChart" width="300" height="300"></canvas> -->
     </div>
 </div>

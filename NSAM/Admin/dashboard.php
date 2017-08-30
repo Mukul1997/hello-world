@@ -1,10 +1,10 @@
 <?php
+      include 'view/php/bstaff.php';
+      include 'view/php/bstudent.php';
       session_start();
       if(!$_SESSION['name']) {
        header('Location: index.php?action=Please Login');
       }
-      include 'view/php/bstaff.php';
-      include 'view/php/bstudent.php';
 ?>
 
 <html lang="en" ng-app="adminApp">
@@ -16,7 +16,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+    <!--script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script-->
 
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.js"></script>
@@ -57,7 +57,7 @@
           <div class="col-md-10">
             <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Admin <small>Toolkit</small></h1>
           </div>
-          <div class="col-md-2">
+          <!-- <div class="col-md-2">
             <div class="dropdown create">
               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Bulk Upload
@@ -68,7 +68,7 @@
                 <li><a type="button" data-toggle="modal" data-target="#addPage2">Add Student</a></li>
               </ul>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </header>
@@ -115,16 +115,16 @@
     <!-- Modals -->
 
     <!-- Add Page1 -->
-    <div class="modal fade" id="addPage1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <!-- <div class="modal fade" id="addPage1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-      <div class="modal-content" id="m1">
+      <div class="modal-content" id="m1.">
         <form>
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h3 class="modal-title" id="myModalLabel">Add Staff</h3>
         </div>
         <div class="modal-body">
-          <!-- data here -->
+          
           <form action="view/php/bstaff.php" method="post" enctype="multipart/form-data">
               <h1>Bulk Entry (Staff)</h1>
               <input type="file" name="file"/>
@@ -134,24 +134,24 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <!-- <button type="submit" class="btn btn-primary">Save changes</button> -->
+          
         </div>
       </form>
       </div>
     </div>
-</div>
+</div> -->
 
 <!-- Add Page2 -->
-    <div class="modal fade" id="addPage2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!--     <div class="modal fade" id="addPage2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
-      <div class="modal-content" id="m2">
+      <div class="modal-content" id="m2.">
         <form>
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h3 class="modal-title" id="myModalLabel">Add Student</h3>
         </div>
         <div class="modal-body">
-          <!-- data here -->
+          
           <form action="view/php/bstudent.php" method="post" enctype="multipart/form-data">
               <h1>Bulk Entry (Student)</h1>
               <input type="file" name="file"/>
@@ -161,12 +161,12 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <!-- <button type="submit" class="btn btn-primary">Save changes</button> -->
+          
         </div>
       </form>
       </div>
     </div>
-</div>
+</div> -->
 
 <!--script>
     CKEDITOR.replace( 'editor1' );
@@ -175,7 +175,8 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
+    <script src="js/bstrap_jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Basic Router Setup and Controllers -->

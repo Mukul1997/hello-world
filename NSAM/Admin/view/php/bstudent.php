@@ -1,5 +1,6 @@
 <?php 
-	require "db.php";
+$connect=mysqli_connect("localhost","root","");
+mysqli_select_db($connect,"mydb");
 
 if(isset($_POST['importsub']))
 {
@@ -35,6 +36,6 @@ if(isset($_POST['importsub']))
        $res2=mysqli_query($connect,$sql1);
     }
 
-    echo ("Successful");
+    echo ($data);
 }
 ?>

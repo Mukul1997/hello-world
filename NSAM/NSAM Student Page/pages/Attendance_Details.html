@@ -16,9 +16,9 @@
 					<tbody>
 						<tr class="success">
 							<td ng-repeat="p in subject">{{p.sub_name}}</td>
-							<td ng-repeat="r in present">{{r.atten}}</td>
-							<td ng-repeat="q in total">{{q.total}}</td>
-							<td>blah blah</td>
+							<td ng-repeat="r in present" ng-checked="blah($index,r.atten)">{{r.atten}}</td>
+							<td ng-repeat="q in total" ng-checked="blah2($index,q.total)">{{q.total}}</td>
+							<td>{{res}}</td>
 						</tr>
 					</tbody>
 
