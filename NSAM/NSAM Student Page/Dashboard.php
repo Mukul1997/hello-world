@@ -1,7 +1,7 @@
 <?php
       session_start();
       if(!$_SESSION['sname']) {
-       header('Location:Login.php?action=Please Login');
+       header('Location:index.php?action=Please Login');
       }
 ?>
 
@@ -14,8 +14,10 @@
     
     <link rel="stylesheet" href="css/Stylesheet.css">
     <!-- Bootstrap links -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!-- Angular Plugin -->
     <script src="js/controllers/angular.min.js"></script>
     <script src="js/controllers/angular-route.js"></script>

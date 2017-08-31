@@ -2,7 +2,7 @@
 $connect=mysqli_connect("localhost","root","");
 mysqli_select_db($connect,"mydb");
 
-if(isset($_POST['importsub']))
+if(isset($_POST['importsub1']))
 {
     $file=$_FILES['file']['tmp_name'];
     $fp=fopen($file,"r");
@@ -21,8 +21,7 @@ if(isset($_POST['importsub']))
        $res1=mysqli_query($connect,$sql);
        
     }
-    echo ($data);
-
+    echo("successful");
 }
 ?>
 

@@ -4,11 +4,12 @@
 <html lang="en-US">
 
 <head>
+	<link rel="shortcut icon" type="image/png" href="img/Nitte-Logo.png">
 	<meta charset="utf-8">
 	<title>Admin Login</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/fontawesome.css">
 	<link rel="stylesheet" type="text/css" href="css/admin.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round">
@@ -29,7 +30,7 @@
 			</fieldset>
 		</form>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bstrap_jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

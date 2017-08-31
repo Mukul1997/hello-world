@@ -1,6 +1,6 @@
  <?php  
  //select.php  
- $connect = mysqli_connect("localhost", "root", "", "mydb");  
+ require 'db.php';  
  $output = array();  
  $query = "SELECT * FROM staff";  
  $result = mysqli_query($connect, $query);  

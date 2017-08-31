@@ -154,9 +154,11 @@ div.red {
 #m1 {
   background: url(../img/bstaff.jpg);
   /*opacity: 0.5;*/
+  box-shadow: 10px 10px 5px #888888;
 }
 
 #m2 {
   background: url(../img/bstudent.jpg);
   /*opacity: 0.5;*/
+  box-shadow: 10px 10px 5px #888888;
 }

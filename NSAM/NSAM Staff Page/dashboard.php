@@ -1,18 +1,19 @@
 <?php
       session_start();
       if(!$_SESSION['sname']) {
-       header('Location:login.php?action=Please Login');
+       header('Location:index.php?action=Please Login');
       }
 ?>
 
 <html ng-app="myApp">
   <head>
+    <link rel="shortcut icon" type="image/png" href="img/Nitte-Logo.png">
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <!-- Angular plugins -->
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.js"></script>
@@ -27,7 +28,7 @@
     <script src="js/controllers/viewController.js"></script>
     <script src="js/controllers/reportController.js"></script> 
     <script src="js/controllers/staffChangePasswordController.js"></script> 
-    <script src="https://rawgithub.com/eligrey/FileSaver.js/master/FileSaver.js" type="text/javascript"></script>
+    <!--script src="https://rawgithub.com/eligrey/FileSaver.js/master/FileSaver.js" type="text/javascript"></script-->
     <script src="js/fileSaver.js" type="text/javascript"></script>
 
   </head>

@@ -20,7 +20,7 @@
         header('Location: dashboard.php?success=Login Successful'); 
     }
     else
-         header('Location: login.php?invalid=Login Failed');
+         header('Location: index.php?invalid=Login Failed');
 
    }
 ?>

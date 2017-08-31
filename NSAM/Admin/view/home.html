@@ -7,25 +7,25 @@
         <h3 class="panel-title">Smart Campus Service</h3>
     </div>
     <div class="panel-body">
-        <div class="col-md-3 col-xs-3">
-            <div class="well text-center">
+        <div class="col-md-4 col-xs-4">
+            <div class="well text-center" id="m1">
                 <h2>Student</h2>
-                <h4>count 1</h4>
+                <h4 ng-repeat="i in stucount">{{i.total}}</h4>
             </div>
         </div>
-        <div class="col-md-3 col-xs-3">
-            <div class="well text-center">
+        <div class="col-md-4 col-xs-4">
+            <div class="well text-center" id="m2">
                 <h2>Staff</h2>
-                <h4>count 2</h4>
+                <h4 ng-repeat="j in stcount">{{j.total}}</h4>
             </div>
         </div>
-        <div class="col-md-3 col-xs-3">
+        <!-- <div class="col-md-3 col-xs-3">
             <div class="well text-center">
                 <h2>Absent</h2>
                 <h4>count 3</h4>
             </div>
-        </div>
-        <div class="col-md-3 col-xs-3">
+        </div> -->
+        <div class="col-md-4 col-xs-4">
             <div class="well text-center">
                 <h2>SMS</h2>
                 <h4>count 4</h4>
@@ -41,7 +41,7 @@
     <div class="panel-body">
         <div class="col-md-6 col-xs-3">
             <div class="well text-center">
-                <form action="view/php/bstudent.php" method="post" enctype="multipart/form-data">
+                <form action="view/php/bstudent.php" target="_blank" method="post" enctype="multipart/form-data">
                     <h1>Bulk Entry (Student)</h1>
                     <input type="file" name="file"/>
                     <br><br>
@@ -52,11 +52,11 @@
         
         <div class="col-md-6 col-xs-3">
             <div class="well text-center">
-                <form action="view/php/bstaff.php" method="post" enctype="multipart/form-data">
+                <form action="view/php/bstaff.php" target="_blank" method="post" enctype="multipart/form-data">
                     <h1>Bulk Entry (Staff)</h1>
                     <input type="file" name="file"/>
                     <br><br>
-                    <input class="btn btn-info" type="submit" name="importsub"/>
+                    <input class="btn btn-info" type="submit" name="importsub1"/>
                 </form>
             </div>
         </div>

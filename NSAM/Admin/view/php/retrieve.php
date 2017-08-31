@@ -1,6 +1,6 @@
  <?php  
  //select.php  
- $connect = mysqli_connect("localhost", "root", "", "myserver");  
+ require 'db.php';  
  $output = array();  
  $query = "SELECT * FROM student";  
  $result = mysqli_query($connect, $query);  
